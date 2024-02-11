@@ -46,8 +46,10 @@ class NaiveBayes:
         -----------
         x : float
             Value to calculate the likelihood for.
+            
         mean : float
             Mean value of the feature.
+            
         std : float
             Standard deviation of the feature.
 
@@ -100,6 +102,7 @@ class NaiveBayes:
         -----------
         predicted_labels : array-like
             Labels predicted by the model.
+            
         true_labels : array-like
             True target labels.
 
@@ -107,8 +110,10 @@ class NaiveBayes:
         --------
         accuracy : float
             Model accuracy.
+            
         precision : float
             Model precision.
+            
         recall : float
             Model recall.
         """
