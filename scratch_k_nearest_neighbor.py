@@ -238,6 +238,9 @@ class KnnClassifier:
 
         recall : float
           Model recall.
+
+        f1_score : float
+            Model f1_score
         """
         # Calculate the number of correct predictions, true positives, and false positives
         correct_predictions = 0
@@ -265,7 +268,10 @@ class KnnClassifier:
         # Recall formula: TP / (TP + FN)
         recall = true_positives / (true_positives + false_negatives) if (true_positives + false_negatives) > 0 else 0
 
-        return accuracy, precision, recall
+        # F1 score formula: 2 * (precision * recall) / (precision + recall)
+        f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+        
+        return accuracy, precision, recall, f1_score
 
 class KnnRegressor(KnnClassifier):
     def __init__(self, distance_type='euclidean',
