@@ -24,7 +24,7 @@
 ```
 ### Regressor:
 ```python
-  # Create objek KnnRegressor
+  # Inisialisasi model KNN
   knn_reg = KnnRegressor()
   
   # Fit model
