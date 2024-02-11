@@ -92,28 +92,28 @@ class NaiveBayes:
         prediction = max(normalized_posteriors, key=normalized_posteriors.get)
         return prediction
 
-    def metrics_classification(self, predicted_labels, true_labels):
+    def metrics_classification(self, predicted_labels):
         """
-        Calculate the accuracy, precision, and recall of the Naive Bayes model.
+        Calculate the accuracy, precision, and recall of the KNN model.
 
         Parameters:
         -----------
         predicted_labels : array-like
-            Labels predicted by the model.
-            
-        true_labels : array-like
-            True target labels.
+          Labels predicted by the model.
 
         Returns:
         --------
         accuracy : float
-            Model accuracy.
-            
+          Model accuracy.
+
         precision : float
-            Model precision.
-            
+          Model precision.
+
         recall : float
-            Model recall.
+          Model recall.
+
+        f1_score : float
+            Model f1_score
         """
         # Calculate the number of correct predictions, true positives, and false positives
         correct_predictions = 0
@@ -121,7 +121,7 @@ class NaiveBayes:
         false_positives = 0
         false_negatives = 0
 
-        for predicted_label, true_label in zip(predicted_labels, true_labels):
+        for predicted_label, true_label in zip(predicted_labels, self.target):
             if predicted_label == true_label:
                 correct_predictions += 1
                 if predicted_label == 1:
@@ -133,7 +133,7 @@ class NaiveBayes:
                     false_negatives += 1
 
         # Accuracy formula: (number of correct predictions) / (total predictions)
-        accuracy = correct_predictions / len(true_labels)
+        accuracy = correct_predictions / len(self.target)
 
         # Precision formula: TP / (TP + FP)
         precision = true_positives / (true_positives + false_positives) if (true_positives + false_positives) > 0 else 0
@@ -141,4 +141,7 @@ class NaiveBayes:
         # Recall formula: TP / (TP + FN)
         recall = true_positives / (true_positives + false_negatives) if (true_positives + false_negatives) > 0 else 0
 
-        return accuracy, precision, recall
+        # F1 score formula: 2 * (precision * recall) / (precision + recall)
+        f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+        
+        return accuracy, precision, recall, f1_score
