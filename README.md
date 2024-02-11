@@ -1,4 +1,4 @@
-# How to used this model:
+# How to use this model:
 ---
 
 ## KNN Model Example
