@@ -15,7 +15,7 @@
   # Prediction label for each instance
   predicted_labels = np.array([knn_model.predict(data_point) for data_point in predictors])
   
-  # Calculate accuracy, precision, recall
+  # Calculate accuracy, precision, recall, f1_score
   accuracy, precision, recall, f1_score = knn_model.metrics_classification(predicted_labels)
   
   print("Accuracy model KNN:", accuracy)
@@ -56,7 +56,7 @@ naive_bayes.fit(predictor, target)
 # Prediction label for each instance
 predicted_labels = np.array([naive_bayes.predict(data_point) for data_point in predictor.values])
 
-# Calculate accuracy, precision, recall
+# Calculate accuracy, precision, recall, f1_score
 accuracy, precision, recall, f1_score = naive_bayes.metrics_classification(predicted_labels, target)
 
 print("Accuracy model Naive Bayes:", accuracy)
