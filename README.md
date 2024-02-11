@@ -1,9 +1,12 @@
 # How to use this model:
 ---
 
-## KNN Model Example
+## Supervised Model
+---
 
-### Classification:
+### KNN Model Example
+
+#### Classification:
 
   ```python
   # Inisialisasi model KNN
@@ -23,7 +26,7 @@
   print("Recall model KNN:", recall)
   print("F1_score model KNN:", f1_score)
 ```
-### Regressor:
+#### Regressor:
 ```python
   # Inisialisasi model KNN
   knn_reg = KnnRegressor()
@@ -43,9 +46,9 @@
   print("R2 Score model KNN:", r2)
 ```
 
-## Naive Bayes Model Example
+### Naive Bayes Model Example
 
-### Classification:
+#### Classification:
 ```python
 # Inisialisasi model Naive Bayes
 naive_bayes = NaiveBayes()
