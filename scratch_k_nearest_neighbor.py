@@ -153,7 +153,7 @@ class KnnClassifier:
 
     def fit(self, predictor, target):
         """
-        Train the KNN model with training data
+        Method for fitting data between predictor and target
         """
         self.predictor = predictor
         self.target = target
