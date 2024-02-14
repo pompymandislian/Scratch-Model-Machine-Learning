@@ -14,7 +14,7 @@ class NaiveBayes:
 
     def fit(self, predictor, target):
         """
-        Train the Naive Bayes model with training data.
+        Method for fitting data between predictor and target
         """
         # Convert target to pandas Series
         target_series = pd.Series(target)
