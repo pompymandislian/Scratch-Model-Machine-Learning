@@ -97,5 +97,5 @@ mean_squared_error, root_mean_squared_error, mean_absolute_error, r2 = regressor
 print("Mean Squared Error model Linear Regression:", mean_squared_error)
 print("Root Mean Squared Error model Linear Regression:", root_mean_squared_error)
 print("Mean Absolute Error model Linear Regression:", mean_absolute_error)
-print("R2 Score model Linear Regression:", r2
+print("R2 Score model Linear Regression:", r2)
 ```
