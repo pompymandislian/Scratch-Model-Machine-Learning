@@ -67,3 +67,35 @@ print("Precision model Naive Bayes:", precision)
 print("Recall model Naive Bayes:", recall)
 print("F1_score model Naive Bayes:", f1_score)
 ```
+
+### Linear Regression Model Example
+
+#### Regressor:
+
+```python
+# Inisialisasi model LinearRegressor
+regressor = LinearRegressor()
+
+# Fitting model
+regressor.fit(predictors, target)
+
+# coef, intercept, and RSS
+coef = regressor.coefficient() # obtain coef
+intercept = regressor.intercept() # obtain intercept 
+rss = regressor.residual_sum_square() # obtain rss
+
+print('Intercept:', intercept)
+print('Coefficient :', coef)
+print('Residual Sum of Square :', RSS)
+
+# Prediction label for each instance
+predicted_labels_liner = regressor.predict(predictors)
+
+# Calculate mean_squared_error, root_mean_squared_error, mean_absolute_error, r2
+mean_squared_error, root_mean_squared_error, mean_absolute_error, r2 = regressor.metrics_regression(predicted_labels_liner)
+
+print("Mean Squared Error model Linear Regression:", mean_squared_error)
+print("Root Mean Squared Error model Linear Regression:", root_mean_squared_error)
+print("Mean Absolute Error model Linear Regression:", mean_absolute_error)
+print("R2 Score model Linear Regression:", r2
+```
