@@ -99,3 +99,28 @@ print("Root Mean Squared Error model Linear Regression:", root_mean_squared_erro
 print("Mean Absolute Error model Linear Regression:", mean_absolute_error)
 print("R2 Score model Linear Regression:", r2)
 ```
+
+### Logistic Regression Model Example
+
+#### Classification:
+```python
+# Inisialisasi model LogisticRegression
+logit_model = LogisticRegression(max_iter = 200, penalty = 'l1')
+
+# Fitting model
+logit_model.fit(predictors, target)
+
+# Obtain cost function for look optimum model
+logit_model.cost_function()
+
+# Prediction label for each instance
+prob_score = logit_model.predict(predictors)
+
+# Calculate accuracy, precision, recall, f1_score
+accuracy, precision, recall, f1_score = knn_model.metrics_classification(predicted_labels)
+
+print("Accuracy model Logistic Regression:", accuracy)
+print("Precision model Logistic Regression:", precision)
+print("Recall model Logistic Regression:", recall)
+print("F1_score model Logistic Regression:", f1_score)
+```
