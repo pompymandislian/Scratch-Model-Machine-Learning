@@ -124,3 +124,25 @@ print("Precision model Logistic Regression:", precision)
 print("Recall model Logistic Regression:", recall)
 print("F1_score model Logistic Regression:", f1_score)
 ```
+
+### Decision Tree Model Example
+
+#### Classification:
+```python
+# Inisialisasi model Decision Tree
+model = ClassifierDesicionTree(max_depth = 3, max_features = 'auto')
+
+# Fitting model
+model.fit(predictors, target)
+
+# Prediction label for each instance
+predictions = model.predict(predictors)
+
+# Calculate accuracy, precision, recall, f1_score
+accuracy, precision, recall, f1_score = knn_model.metrics_classification(predicted_labels)
+
+print("Accuracy model Decision Tree:", accuracy)
+print("Precision model Decision Tree:", precision)
+print("Recall model Decision Tree:", recall)
+print("F1_score model Decision Tree:", f1_score)
+```
